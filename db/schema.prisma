@@ -63,3 +63,29 @@ model Token {
 // enum TokenType {
 //   RESET_PASSWORD
 // }
+
+model Music {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String
+  artist    String
+  url       String
+  Player    Player?  @relation(fields: [playerId], references: [id])
+  playerId  Int?
+}
+
+model Player {
+  id         Int      @id @default(autoincrement())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  name       String
+  school     String //学校の区分
+  origin     String //出身校
+  category   String //種目
+  year       Int
+  url        String
+  musics     Music[]
+  tournament String
+
+}
