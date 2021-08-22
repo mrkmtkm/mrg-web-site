@@ -7,6 +7,8 @@ import { Player } from "./[playerId]"
 import { CreatePlayerForm } from "app/players/components/CreatePlayerForm"
 import { PlayerForm, PlayerFormValidate } from "app/auth/validations"
 import { Container } from "react-bootstrap"
+import ReCAPTCHA from "react-google-recaptcha"
+import axios from "axios"
 
 const NewPlayerPage: BlitzPage = () => {
   const router = useRouter()
@@ -45,12 +47,16 @@ const NewPlayerPage: BlitzPage = () => {
       }
     }
   }
+  const onChange = async (value) => {
+    console.log(value)
+  }
 
   return (
     <Container>
       <h1 className="text-center py-5">選手/チーム作成</h1>
 
       <CreatePlayerForm state={player} onChangeState={setPlayer} onSubmit={onSubmit} />
+      <ReCAPTCHA sitekey="6Lc_M6gbAAAAAEoXL14oaOrLgRjTfRPQTIlDGbqE" onChange={onChange} />
 
       <p className="mt-4 mb-3 h5 text-right">
         <Link href={Routes.PlayersPage()}>

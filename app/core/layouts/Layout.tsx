@@ -16,6 +16,7 @@ const Layout = ({ title, children }: LayoutProps) => {
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossOrigin="anonymous"
       />
+      <script src="https://www.google.com/recaptcha/api.js"></script>
       <Head>
         <title>{title || "男子新体操原曲サイト"}</title>
         <link rel="icon" href="/icon.JPG" />
