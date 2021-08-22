@@ -12,7 +12,7 @@ jobs:
       - add_ssh_keys
 
       # CircleCI に登録した環境変数を使って SSH
-      - run: ssh ${USER_NAME}@${HOST_NAME} "cd /var/wwww/mrg-web-site && git pull origin main"
+      - run: ssh -p 22 ${USER_NAME}@${HOST_NAME} "cd /var/wwww/mrg-web-site && git pull origin main"
 
 workflows:
   version: 2
