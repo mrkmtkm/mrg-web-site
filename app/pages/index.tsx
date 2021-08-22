@@ -56,7 +56,7 @@ const Home: BlitzPage = () => {
         <div className="logo">
           <img src="/logo.png" alt="blitz.js" />
         </div>
-        <p>aaa</p>
+        <p>aaa111</p>
         <p>
           <strong>Congrats!</strong> Your app is ready, including user sign-up and log-in.
         </p>
